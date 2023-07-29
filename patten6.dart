@@ -1,5 +1,6 @@
 import 'dart:io';
-void main(){
+void main()
+{
     
     for(int i = 5 ; i>=1; i--)
     {  
