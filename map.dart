@@ -1,45 +1,43 @@
 import 'dart:io';
-
 void main()
 {
-  List l1 = [];
-  List l2 = [];
-  List l3 = [];
-  List l4 = [];
-  Map  m1 = {};
-  dynamic s1;
+   Map emp={};
+    for(int i=0;i<=3;i++)
+    {
+         print("enter the emp id:");
+         int id = int.parse(stdin.readLineSync()!);
 
-  for(int i=0; i<=2; i++)
-  {
-    
-    print("Enter id   of employee : ");
-    s1 = stdin.readLineSync();
-    l1.add(s1);
+           print("enter the emp name:");
+          String? name=(stdin.readLineSync()!);
 
-    print("Enter name of employee : ");
-    s1 = stdin.readLineSync();
-    l2.add(s1);
+          print("enter the emp age:");
+          int age= int.parse(stdin.readLineSync()!);
 
-    print("Enter age of employee  : ");
-    s1 = stdin.readLineSync();
-    l3.add(s1);
+          print("enter the emp salary:");
+          int salary= int.parse(stdin.readLineSync()!);
 
-    print("Enter salary of employee : ");
-    s1 = stdin.readLineSync();
-    l4.add(s1);
 
-    print("\n");
+        emp['name']={
+          'id':id,
+          'name':name,
+          'age':age,
+          'salary':salary,
+        
+        
+        };
 
-  }
 
-  for(int i=0; i<=2; i++)
-  {
-    m1["Id"] = l1[i];
-    m1["Name"] = l2[i];
-    m1["Age"] = l3[i];
-    m1["Salary"] = l4[i];
-    
-  }
-  print(m1);
-  
+        for(String key in emp.keys)
+        {
+          print('emp id:${emp[key]['id']}');
+           print('emp name:${emp[key]['name']}'); 
+           print('emp age:${emp[key]['age']}');
+           print('emp salary:${emp[key]['salary']}');
+
+          
+        }
+
+
+
+    }
 }
