@@ -2,8 +2,8 @@
 import 'dart:io';
 class Person 
 {
-  String name;
-  int age;
+  String? name;
+  int? age;
   
   Person(this.name, this.age);
   
